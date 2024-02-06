@@ -1,0 +1,92 @@
+﻿@model IEnumerable<alhadaProject.Models.State>
+@{
+    ViewData["Title"] = "MyEstate";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<div roll="main" class="main pgl-bg-grey">
+    <!-- Begin Properties -->
+
+    <section class="pgl-properties pgl-bg-grey">
+        <div class="container ar">
+            <h3> قائمة بالعقارات المتوفرة</h3>
+            <div class="tab-pane active" id="all">
+                @foreach(  alhadaProject.Models.State item in Model)
+                {
+                <div class="pgl-property animation">
+                    <div class="row">
+                        <div class="col-sm-6 col-md-4">
+                            <div class="property-thumb-info-image">
+                                <a asp-action="StateDetails" asp-route-id="@item.Id">
+                                    <img alt="" class="img-responsive" src="~/uploads/@item.Photo">
+                                    <span class="property-thumb-info-label">
+                                        <span class="label price">@item.Price</span>
+                                        <span class="label forrent">@item.stateType</span>
+                                    </span>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 col-md-8">
+                            <div class="property-thumb-info">
+                                <a href="http://test.upright-jo.com/Estates/details/5252">
+                                </a><div class="property-thumb-info-content">
+                                    <a href="http://test.upright-jo.com/Estates/details/5252">
+                                        <h3>
+                                            <strong>( @item.Ref )</strong> @item.PromoNotes 
+                                        </h3>
+                                        <address>@item.Category - @item.Floor -  @item.Region     </address>
+                                    </a><div class="building-note-overflow">
+                                            <a asp-action="StateDetails" asp-route-id="@item.Id"></a><div class="" dir="auto">
+                                                <a asp-action="StateDetails" asp-route-id="@item.Id">
+                                            </a>
+                                            
+                                        </div>
+                                    </div>
+
+
+                                </div>
+                                <div class="amenities clearfix">
+                                    <ul class="pull-left total_area">
+                                        <li><strong>المساحة:</strong> @item.LandArea<sup>م٢</sup></li>
+                                    </ul>
+                                    <ul class="pull-right">
+                                        <li><i class="icons icon-bedroom"></i> @item.RoomNo</li>
+                                        <li><i class="icons icon-bathroom"></i> @item.PathNo</li>
+                                    </ul>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                }
+
+
+             @*   <ul class="pagination">
+                    <li></li>
+                    <li class="active"><a href="http://test.upright-jo.com/Estates/users_estates_list/0/10">1</a></li>
+                    <li><a href="http://test.upright-jo.com/Estates/users_estates_list/20" data-ci-pagination-page="2">2</a></li>
+                    <li><a href="http://test.upright-jo.com/Estates/users_estates_list/40" data-ci-pagination-page="3">3</a></li>
+                    <li><a href="http://test.upright-jo.com/Estates/users_estates_list/60" data-ci-pagination-page="4">4</a></li>
+                    <li><a href="http://test.upright-jo.com/Estates/users_estates_list/80" data-ci-pagination-page="5">5</a></li>
+                    <li><a href="http://test.upright-jo.com/Estates/users_estates_list/100" data-ci-pagination-page="6">6</a></li>
+                    <li><a href="http://test.upright-jo.com/Estates/users_estates_list/120" data-ci-pagination-page="7">7</a></li>
+                    <li><a href="http://test.upright-jo.com/Estates/users_estates_list/140" data-ci-pagination-page="8">8</a></li>
+                    <li><a href="http://test.upright-jo.com/Estates/users_estates_list/160" data-ci-pagination-page="9">9</a></li>
+                    <li><a href="http://test.upright-jo.com/Estates/users_estates_list/180" data-ci-pagination-page="10">10</a></li>
+                    <li><a href="http://test.upright-jo.com/Estates/users_estates_list/200" data-ci-pagination-page="11">11</a></li>
+                    <li><a href="http://test.upright-jo.com/Estates/users_estates_list/220" data-ci-pagination-page="12">12</a></li>
+                    <li><a href="http://test.upright-jo.com/Estates/users_estates_list/240" data-ci-pagination-page="13">13</a></li>
+                    <li><a href="http://test.upright-jo.com/Estates/users_estates_list/260" data-ci-pagination-page="14">14</a></li>
+                    <li><a href="http://test.upright-jo.com/Estates/users_estates_list/280" data-ci-pagination-page="15">15</a></li>
+                    <li><a href="http://test.upright-jo.com/Estates/users_estates_list/300" data-ci-pagination-page="16">16</a></li>
+                    <li><a href="http://test.upright-jo.com/Estates/users_estates_list/20" data-ci-pagination-page="2" rel="next">&gt;</a></li>
+                    <li><a href="http://test.upright-jo.com/Estates/users_estates_list/940" data-ci-pagination-page="48">Last ›</a></li>
+                </ul>*@
+            </div>
+
+        </div>
+    </section>
+    <!-- End Properties -->
+</div>
+

@@ -1,0 +1,311 @@
+﻿
+@{
+    ViewData["Title"] = "ViewClient";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<article class="post post-large post-single ar">
+    <div class="post-body">
+        <div class=" post-leave-comment">
+
+            <div class="row padding_bottom">
+                <div class="form-group ">
+
+                    <div class="row">
+                        <div class="col-md-12 col-sm-12 col-xs-12">
+                            <label>اسم الزبون:</label>
+                            فراس محمد
+                            <hr>
+                        </div>
+                        <div class="col-md-12 col-sm-12 col-xs-12">
+                            <label>رقم الموبايل :</label>
+                            <a href='tel:0781656664 - 00971551016676'>0781656664 - 00971551016676</a>
+                            <hr>
+                        </div>
+                        <div class="col-md-12 col-sm-12 col-xs-12">
+                            <label> درجة الاهتمام :</label>
+                            &nbsp;<i class="fa fa-star" title="مهتم جدا" alt="مهتم جدا"></i> &nbsp;مهتم جدا                            <hr>
+                        </div>
+                        <div class="col-md-12 col-sm-12 col-xs-12">
+                            <div class="form-group ">
+                                <label>  تاريخ الإضافة  :</label>
+                                <span class="ar"> (2018-08-08)</span>
+                                <label>  ساعة الإضافة  :</label>
+                                <span class="ar"> (06:53:07)</span>
+                            </div>
+                            <hr>
+                        </div>
+                        <div class="col-md-12 col-sm-12 col-xs-12">
+                            <label> تفاصيل الزبون  :</label>
+                            <div class='notes_view'>
+                                <p>اتى مع زوجته واطفاله</p>
+                                <p>&nbsp;</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="row">
+                        <div class="col-md-2 col-sm-12 col-xs-12">
+                            <div class="form-group">
+                                <input type="button" value=' إضافة تفاصيل جديد ' class='btn btn-block btn-primary margtop new_commenit' onclick="window.openCommenitBox()">
+                                <input type="button" value='إخفاء التفاصيل ' class='btn btn-block btn-primary margtop hide_new_commenit' style='display:none' onclick="window.hideCommenitBox()">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <form action="http://test.upright-jo.com/Clients/new_commenit" class="col-md-12 input-forms" id="new_comment_form" style="display:none" method="post" accept-charset="utf-8">
+                            <div class="new_record "></div>
+
+                            <input type="hidden" name="client_id" value="313" />
+                            <input type="hidden" name="user_id" value="2" />
+                        </form>
+                    </div>
+                </div>
+
+                <div class='form-group border_light client_details visit'>
+                    <div class='row'>
+                        <div class='overflow-block col-md-2 col-xs-12'>
+                            <span class="bold"> تفاصيل الزيارة </span>
+                        </div>
+                    </div>
+                    <div class='row'>
+                        <div class='col-md-2 col-xs-12'>
+                            <label>التاريخ :</label>
+                            <span class="bold">2023-07-23</span>
+                        </div>
+                        <div class='col-md-2 col-xs-12'>
+                            <label>الوقت :</label>
+                            <span class="bold">2:59:45 PM</span>
+                        </div>
+                    </div>
+                    <div class='row'>
+                        <div class='col-md-12 col-xs-12'>
+                            <label> التفاصيل :</label>
+                            شاهد عبدالله الركيبات دابوق وشاهد المنصور دابوق وشاهد الرابية المنصور روف 190م
+                        </div>
+                        <hr>
+                    </div>
+                </div>
+                <div class='form-group border_light client_details visit'>
+                    <div class='row'>
+                        <div class='overflow-block col-md-2 col-xs-12'>
+                            <span class="bold"> تفاصيل الزيارة </span>
+                        </div>
+                    </div>
+                    <div class='row'>
+                        <div class='col-md-2 col-xs-12'>
+                            <label>التاريخ :</label>
+                            <span class="bold">2019-08-19</span>
+                        </div>
+                        <div class='col-md-2 col-xs-12'>
+                            <label>الوقت :</label>
+                            <span class="bold">3:56:10 PM</span>
+                        </div>
+                    </div>
+                    <div class='row'>
+                        <div class='col-md-12 col-xs-12'>
+                            <label> التفاصيل :</label>
+                            شاهد اسكان سينا وشاهد النقيب وشاهد حسين منصور عجبته الشبه ارضي يمين ولكن مباعة
+                        </div>
+                        <hr>
+                    </div>
+                </div>
+                <div class='form-group border_light client_details '>
+                    <div class='row'>
+                        <div class='overflow-block col-md-2 col-xs-12'>
+                            <span class="bold">تفاصيل الإتصال  </span>
+                        </div>
+                    </div>
+                    <div class='row'>
+                        <div class='col-md-2 col-xs-12'>
+                            <label>التاريخ :</label>
+                            <span class="bold">2018-11-17</span>
+                        </div>
+                        <div class='col-md-2 col-xs-12'>
+                            <label>الوقت :</label>
+                            <span class="bold">12:12:25 AM</span>
+                        </div>
+                    </div>
+                    <div class='row'>
+                        <div class='col-md-12 col-xs-12'>
+                            <label> التفاصيل :</label>
+                            جاي بشهر 1 / 2019م ان شاء الله
+                        </div>
+                        <hr>
+                    </div>
+                </div>
+                <div class='form-group border_light client_details '>
+                    <div class='row'>
+                        <div class='overflow-block col-md-2 col-xs-12'>
+                            <span class="bold">تفاصيل الإتصال  </span>
+                        </div>
+                    </div>
+                    <div class='row'>
+                        <div class='col-md-2 col-xs-12'>
+                            <label>التاريخ :</label>
+                            <span class="bold">2018-10-27</span>
+                        </div>
+                        <div class='col-md-2 col-xs-12'>
+                            <label>الوقت :</label>
+                            <span class="bold">10:36:12 AM</span>
+                        </div>
+                    </div>
+                    <div class='row'>
+                        <div class='col-md-12 col-xs-12'>
+                            <label> التفاصيل :</label>
+                            تواصلت معه على الواتس اب
+                        </div>
+                        <hr>
+                    </div>
+                </div>
+                <div class='form-group border_light client_details visit'>
+                    <div class='row'>
+                        <div class='overflow-block col-md-2 col-xs-12'>
+                            <span class="bold"> تفاصيل الزيارة </span>
+                        </div>
+                    </div>
+                    <div class='row'>
+                        <div class='col-md-2 col-xs-12'>
+                            <label>التاريخ :</label>
+                            <span class="bold">2018-10-24</span>
+                        </div>
+                        <div class='col-md-2 col-xs-12'>
+                            <label>الوقت :</label>
+                            <span class="bold">6:04:55 PM</span>
+                        </div>
+                    </div>
+                    <div class='row'>
+                        <div class='col-md-12 col-xs-12'>
+                            <label> التفاصيل :</label>
+                            شاهد عبد الناصر الحسيني الامير راشد
+                        </div>
+                        <hr>
+                    </div>
+                </div>
+                <div class='form-group border_light client_details '>
+                    <div class='row'>
+                        <div class='overflow-block col-md-2 col-xs-12'>
+                            <span class="bold">تفاصيل الإتصال  </span>
+                        </div>
+                    </div>
+                    <div class='row'>
+                        <div class='col-md-2 col-xs-12'>
+                            <label>التاريخ :</label>
+                            <span class="bold">2018-10-24</span>
+                        </div>
+                        <div class='col-md-2 col-xs-12'>
+                            <label>الوقت :</label>
+                            <span class="bold">1:38:20 PM</span>
+                        </div>
+                    </div>
+                    <div class='row'>
+                        <div class='col-md-12 col-xs-12'>
+                            <label> التفاصيل :</label>
+                            شاهد المنصور روف من الخارج وشاهد دابوق روف شادي الطويل
+                        </div>
+                        <hr>
+                    </div>
+                </div>
+                <div class='form-group border_light client_details '>
+                    <div class='row'>
+                        <div class='overflow-block col-md-2 col-xs-12'>
+                            <span class="bold">تفاصيل الإتصال  </span>
+                        </div>
+                    </div>
+                    <div class='row'>
+                        <div class='col-md-2 col-xs-12'>
+                            <label>التاريخ :</label>
+                            <span class="bold">2018-10-24</span>
+                        </div>
+                        <div class='col-md-2 col-xs-12'>
+                            <label>الوقت :</label>
+                            <span class="bold">11:05:48 AM</span>
+                        </div>
+                    </div>
+                    <div class='row'>
+                        <div class='col-md-12 col-xs-12'>
+                            <label> التفاصيل :</label>
+                            بده ييجي يشاهد شقة امانينا الرابية مع روف
+                        </div>
+                        <hr>
+                    </div>
+                </div>
+                <div class='form-group border_light client_details '>
+                    <div class='row'>
+                        <div class='overflow-block col-md-2 col-xs-12'>
+                            <span class="bold">تفاصيل الإتصال  </span>
+                        </div>
+                    </div>
+                    <div class='row'>
+                        <div class='col-md-2 col-xs-12'>
+                            <label>التاريخ :</label>
+                            <span class="bold">2018-08-29</span>
+                        </div>
+                        <div class='col-md-2 col-xs-12'>
+                            <label>الوقت :</label>
+                            <span class="bold">11:45:40 AM</span>
+                        </div>
+                    </div>
+                    <div class='row'>
+                        <div class='col-md-12 col-xs-12'>
+                            <label> التفاصيل :</label>
+                            لم يرد على التليفون
+                        </div>
+                        <hr>
+                    </div>
+                </div>
+                <div class='form-group border_light client_details '>
+                    <div class='row'>
+                        <div class='overflow-block col-md-2 col-xs-12'>
+                            <span class="bold">تفاصيل الإتصال  </span>
+                        </div>
+                    </div>
+                    <div class='row'>
+                        <div class='col-md-2 col-xs-12'>
+                            <label>التاريخ :</label>
+                            <span class="bold">2018-08-09</span>
+                        </div>
+                        <div class='col-md-2 col-xs-12'>
+                            <label>الوقت :</label>
+                            <span class="bold">12:02:38 AM</span>
+                        </div>
+                    </div>
+                    <div class='row'>
+                        <div class='col-md-12 col-xs-12'>
+                            <label> التفاصيل :</label>
+                            بده يسافر ويرجع بعد اسبوع يعمل جولة تانية
+                        </div>
+                        <hr>
+                    </div>
+                </div>
+                <div class='form-group border_light client_details visit'>
+                    <div class='row'>
+                        <div class='overflow-block col-md-2 col-xs-12'>
+                            <span class="bold"> تفاصيل الزيارة </span>
+                        </div>
+                    </div>
+                    <div class='row'>
+                        <div class='col-md-2 col-xs-12'>
+                            <label>التاريخ :</label>
+                            <span class="bold">2018-08-08</span>
+                        </div>
+                        <div class='col-md-2 col-xs-12'>
+                            <label>الوقت :</label>
+                            <span class="bold">09:54:39 AM</span>
+                        </div>
+                    </div>
+                    <div class='row'>
+                        <div class='col-md-12 col-xs-12'>
+                            <label> التفاصيل :</label>
+                            شاهد شقة لينا الارضية خلف الدر المنثور وشاهد الفياضية وشاهد المنصور الكرسي من الخارج
+                        </div>
+                        <hr>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</article>
+

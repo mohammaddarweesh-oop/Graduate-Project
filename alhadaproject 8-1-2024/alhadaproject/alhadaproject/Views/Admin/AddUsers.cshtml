@@ -1,0 +1,108 @@
+﻿@model alhadaProject.Models.Employee
+@{
+    ViewData["Title"] = "AddUsers";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<div role="main" class="main pgl-bg-grey">
+    <!-- Begin page top -->
+    <section class="page-top">
+        <div class="container ar">
+            <div class="page-top-in">
+                <h2><span>اضافة مستخدم جديد </span></h2>
+            </div>
+        </div>
+    </section>
+    <!-- End page top -->
+    <!-- Begin content with sidebar -->
+
+    <div class="container ">
+        <div class="row ar">
+            <div class="col-md-6 content textCenter col-center-block">
+                <p>
+                    هذة الشاشة مخصصة لإدارة الموقع
+                </p>
+            </div>
+            <hr>
+        </div>
+        <div class="row ar">
+
+            <form  class="col-md-6 input-forms col-center-block pgl-bg-light" id="newAssetsForm" method="post" accept-charset="utf-8">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                
+                <div class="form-group  ">
+                    <div class="row">
+                        <div class="col-md-12 ">
+                            <label> الاسم الكامل*</label>
+                            <input asp-for="EmpName"    class="form-control"/>
+                            <span asp-validation-for="EmpName" class="text-danger"></span>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="form-group">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <label>الايميل الالكتروني*</label>
+                            <input asp-for="Email" class="form-control">
+                            <span asp-validation-for="Email" class="text-danger"></span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <label>كلمة المرور*</label>
+                            <input type="password" asp-for="Password" class="form-control">
+                            <span asp-validation-for="Password" class="text-danger"></span>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="form-group">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <label> رقم الهاتف*</label>
+                            <input asp-for="Phone" class="form-control">
+                            <span asp-validation-for="Phone" class="text-danger"></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <label>الصلاحيات</label>
+                        <select asp-for="UserType" asp-items="new SelectList(ViewBag.items)" class='chosen-select'></select>
+                            <span asp-validation-for="UserType" class="text-danger"></span>
+                        </div>
+                  </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <label> ملاحظات *</label>
+                            <textarea asp-for="Notes" class="form-control"></textarea>
+                            <span asp-validation-for="Notes" class="text-danger"></span>
+                        </div>
+                    </div>
+                </div>
+               
+               @* <input type="hidden" asp-for="Id">*@
+                <div class="form-group">
+                    <input type="submit" class="btn btn-default center btn-sm" value="حفظ" class="btn btn-default" />
+                    <div style="color:red">
+                        @ViewBag.error
+                    </div>
+
+                </div>
+            </form>
+        </div>
+    </div>
+    <!-- End content with sidebar -->
+</div>
+
+
+

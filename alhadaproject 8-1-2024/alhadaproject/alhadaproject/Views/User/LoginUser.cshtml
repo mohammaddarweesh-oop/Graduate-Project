@@ -1,0 +1,74 @@
+﻿
+@{
+    ViewData["Title"] = "LoginUser";
+    Layout = "~/Views/Shared/_UsarLayout.cshtml";
+}
+
+
+
+   
+    <div role="main" class="main pgl-bg-grey">
+        <!-- Begin page top -->
+        <section class="page-top">
+            <div class="container ar">
+                <div class="page-top-in">
+                    <h2><span>تسجيل الدخول</span></h2>
+                </div>
+            </div>
+        </section>
+        <!-- End page top -->
+        <!-- Begin content with sidebar -->
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6  col-xs-12  content text-center center-block  ">
+
+                    <p>
+                        تسجبل الدخول هو فقط مخصص للموظفين و من لهم صلاحيات الدخول
+                    </p>
+                </div>
+                <hr>
+            </div>
+            <div class="row">
+                <div class="col-md-6  col-xs-12  content text-center center-block ">
+                    <div class="row">
+
+                        <form  class="col-md-6 col-xs-12 input-forms ar" id="newAssetsForm"  method="post" accept-charset="utf-8">
+
+                            <div class="form-group ">
+                                <div class="row">
+
+                                    <div class="col-md-12  col-xs-12 ">
+                                        <label>الايميل الالكتروني*</label>
+                                        <input type="email" name="email" required="true" class="form-control" autocomplete="off" autofocus="true" value="">
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="row">
+                                    <div class="col-md-12  col-xs-12 ">
+                                        <label>الرقم السري*</label>
+                                        <input type="password" name="password" required="true" class="form-control" autocomplete="off" value="">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="row">
+                                    <div class="col-md-12  col-xs-12 ">
+                                    <input type="submit" class="btn btn-default center btn-sm center-block" value="تسجيل الدخول " />
+                                        <div style="color:red">
+                                            @ViewBag.error
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End content with sidebar -->
+    </div>
+    <!-- End Main -->
+   

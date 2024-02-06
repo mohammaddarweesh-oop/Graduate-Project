@@ -1,0 +1,62 @@
+﻿@model IEnumerable<alhadaProject.Models.Employee>
+@{
+    ViewData["Title"] = "Users";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<div role="main" class="main pgl-bg-grey">
+    <!-- Begin content with sidebar -->
+    <div class="container">
+        <div class="row ar">
+            <div class="col-md-6 content textCenter col-center-block">
+                <p>
+                    هذة الشاشة مخصصة لإدارة الموقع
+                </p>
+
+                <div class="form-group">
+
+                    <a asp-action="AddUsers" asp-controller="Admin" class="btn btn-default center btn-sm" >اضافة مستخدم</a>
+
+                </div>
+
+
+            </div>
+            <hr>
+        </div>
+        <div class="row ar">
+            <div class="col-md-12 col-sm-12 col-xs-12 center-block">
+                <table class="table table-striped ar">
+                    <thead>
+                        <tr>
+                            <th>الاسم</th>
+                            <th class="hidden-xs">الاميل</th>
+                            <th class="hidden-xs">المستخدم</th>
+                            <th class="hidden-xs">رقم الهاتف</th>
+                            <th>نشط</th>
+                            <th>تعديل /عرض</th>
+                        </tr>
+                    </thead>
+
+
+                    <tbody>
+
+                        @foreach (var item in Model) {
+
+                        <tr>
+                                <th>@Html.DisplayFor(modelItem => item.EmpName) </th>
+
+                                <th class="hidden-xs">@Html.DisplayFor(modelItem => item.Email)</th>
+                                <th class="hidden-xs">@Html.DisplayFor(modelItem => item.UserType)</th>
+
+                                <th class="hidden-xs"><a href="tel:@Html.DisplayFor(modelItem => item.Phone)">@Html.DisplayFor(modelItem => item.Phone)</a></th>
+                                <th><i class="fa icon-ok-sign"></i></th>
+                                <th><a asp-action="EditUser" asp-controller="Admin" asp-route-id="@item.Id">تعديل</a></th>
+                        </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <!-- End content with sidebar -->
+</div>

@@ -1,0 +1,122 @@
+﻿@model IEnumerable<alhadaproject.Models.ClientViewModel>
+@{
+    ViewData["Title"] = "MyClient";
+    Layout = "~/Views/Shared/_EmpLayout.cshtml";
+}
+
+
+
+<div role="main" class="main pgl-bg-grey pgl-bg-light">
+    <!-- Begin content with sidebar -->
+    <div class="container "> 
+        <section class="pgl-advanced-search  search-box">
+            <div class="container small">
+                <form  method="post" id="clients_search" accept-charset="utf-8">
+                <div class="row ar">
+                    <div class="col-md-2 col-sm-6">
+                        <div class="form-group">
+                            <label>رقم المعرف </label>
+                            <input type="text" name="refs" value="" class="form-control">
+ 
+                        </div>
+                    </div> 
+                    <div class="col-md-2 col-sm-6">
+                        <div class="form-group">
+                            <label> اسم الزبون</label>
+                                <input type="text" name="cname" value="" class="form-control">
+ 
+                        </div>
+                    </div> 
+                    <div class="col-md-2 col-sm-6">
+                        <div class="form-group">
+                            <label>رقم الزبون </label>
+                            <input type="text" name="mobile" value="" class="form-control">
+ 
+                        </div>
+                    </div>
+                    <div class="col-md-2 col-sm-6">
+                        <div class="form-group">
+                            <label> الأهمية </label>
+                            <select name="interested" class="chosen-select" style="display: none;">
+<option value="0">-</option>
+<option value="1">مهتم جدا</option>
+<option value="2">مهتم</option>
+<option value="3">غير مهتم</option>
+</select>
+@*<div class="chosen-container chosen-container-single" style="width: 165px;" title=""><a class="chosen-single" tabindex="-1"><span>-</span><div><b></b></div></a><div class="chosen-drop"><div class="chosen-search"><input type="text" autocomplete="off"></div><ul class="chosen-results"></ul></div></div>*@
+                        </div>
+                    </div>
+
+                                        <div class="col-md-2 col-sm-4 col-xs-4"> 
+                        <div class="form-group"> 
+                            <div class="checkbox">
+                                <label>   <input type="checkbox" name="is_archived" value="true" id="is_archived">
+<span class="bold red">  أرشيف</span>
+                                </label>  
+                            </div> 
+                        </div>
+                        <div class="form-group"> 
+                            <div class="checkbox">
+                                <label><input type="checkbox" name="buy" value="true" id="was_buy_estate">
+<span class="bold"> قام بالشراء</span>
+                                </label> 
+                            </div> 
+                        </div>
+                    </div> 
+                    <div class="col-xs-2">
+                        <div class="form-group">
+                            <div class="row pgl-narrow-row "> 
+                                <button type="submit" class="btn btn-block btn-primary margtop">بحث</button>
+                            </div>
+                        </div>
+                    </div>
+
+                </div> 
+                </form>            </div>
+        </section>
+
+
+
+        <!-- END OF SEARCH BOX -->
+
+        <div class="row ar ">
+            <div class="col-md-12 col-sm-12 col-xs-12 center-block">
+                <table class="table table-striped ar pgl-bg-grey">
+                    <thead>
+                        <tr>
+                            <th>المعرف</th>
+                            <th>الاسم</th>
+                            <th class="hidden-xs">رقم الهاتف</th>
+                            <th class="hidden-xs">تاريخ اخر زيارة</th>
+                            <th class="hidden-xs">الاهمية</th>
+                            <th class="hidden-xs">الموظف</th>
+                            <th>تعديل &nbsp;-&nbsp;عرض</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                        @foreach (ClientViewModel item in Model)
+                        {
+                            <tr>
+                                <th>@item.Ref</th>
+                                <th>@item.ClientName</th>
+                                <th class="hidden-xs">@item.Mobile</th>
+                                <th class="hidden-xs">@item.AddedDate </th>
+                                <th class="hidden-xs">@item.Interest                                     </th>
+                                <th class="hidden-xs">@item.EmpName </th>
+                                <th><a asp-action="EditClient" asp-controller="Emp" asp-route-id="@item.Id">تعديل</a> &nbsp;-&nbsp;<a asp-action="ViewClient" asp-controller="Admin">عرض</a></th>
+                            </tr>
+                        }
+
+                        
+                                   
+                                  
+                               
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <!-- End content with sidebar -->
+</div>

@@ -1,0 +1,52 @@
+﻿
+@{
+    ViewData["Title"] = "readInbox";
+    Inbox inboxes = ViewBag.msg;
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<div role="main" class="main pgl-bg-grey">
+    <!-- Begin content with sidebar -->
+    <div class="container inbox">
+
+        <div class="row ar" style="background-color: #FFF">
+            <div class="col-md-12 content">
+                <div class="form-group">
+                    <div class="contact" style="background-color: #FFF">
+                        <div class="form-group">
+                            <div class="row">
+                                <div class="col-sm-12">
+                                    <label>الاسم:</label>
+                                    <label>@inboxes.FullName</label>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="row">
+                                <div class="col-sm-12">
+                                    <label for="customer_mail">الايميل الالكتروني:</label>
+                                    <label>@inboxes.Email</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="row">
+                                <div class="col-sm-12">
+                                    <label for="subject">عنوان الرسالة:</label>
+                                    <label>@inboxes.Title </label>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label>نص الرسالة:</label>
+                            <label><p style="text-align: center;">@inboxes.Message</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End content with sidebar -->
+</div>

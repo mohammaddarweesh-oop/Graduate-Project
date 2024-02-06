@@ -1,0 +1,144 @@
+﻿@model alhadaProject.Models.Land
+
+@{
+    ViewData["Title"] = "LandDetails";
+    Layout = "~/Views/Shared/_UsarLayout.cshtml";
+}
+
+<div id="page">
+    <div roll='main' class='main pgl-bg-grey'>
+        <!-- Begin content with sidebar -->
+        <div class="container">
+            <div class="row">
+
+                <div class="col-md-12 content">
+                    <section class="pgl-pro-detail pgl-bg-light ">
+                        <div id="slider" class="flexslider">
+                            <ul class="slides">
+
+                                
+                                    <li>
+                                        <img src="~/uploads/@Model.Source" height="800" alt="">
+                                        <span class="property-thumb-info-label">
+                                            <span class="label price">&nbsp;د.أ</span>
+                                        </span>
+                                    </li>
+                               
+
+                            </ul>
+                        </div>
+                        <div id="carousel" class="flexslider">
+                            <ul class="slides">
+                               
+                                    <li> <img src="~/uploads/@Model.Source" alt="image" width="200" height="100"></li>
+                                
+
+
+                            </ul>
+                        </div>
+                        <div class="pgl-detail">
+                            <div class="row details-box">
+                                <div class="col-md-12">
+                                    <h3 class="assete_title">رقم المرجع <strong>( @Model.Ref )</strong></h3>
+                                    <hr>
+                                </div>
+                                <div class="col-sm-4">
+                                    <div class='facebook-share-btn amenities'>
+
+                                        <div id="fb-root"></div>
+                                        <div id="fb-root"></div>
+                                        <script>
+                                            (function (d, s, id) {
+                                                var js, fjs = d.getElementsByTagName(s)[0];
+                                                if (d.getElementById(id))
+                                                    return;
+                                                js = d.createElement(s);
+                                                js.id = id;
+                                                js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.10&appId=1419545331455003";
+                                                fjs.parentNode.insertBefore(js, fjs);
+                                            }(document, 'script', 'facebook-jssdk'));</script>
+
+                                        @* <div class="fb-share-button" data-href="http://test.upright-jo.com/Lands/details/" data-layout="button_count" data-size="large" data-mobile-iframe="true">
+                                        <a class="fb-xfbml-parse-ignore" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fplugins%2F&amp;src=sdkpreparse">Share</a>
+                                        </div>*@
+
+
+                                    </div>
+
+                                    <ul class="list-unstyled amenities amenities-detail small">
+                                        <li>
+                                            <strong>ملاحظة:</strong>
+                                            <br>
+                                        </li>
+                                        <li>
+                                            لمشاهدة الشقق مجانا
+                                            يرجى أخذ موعد مسبق
+                                        </li>
+                                        <li>
+                                            هنالك طلب يتم التوقيع عليه بدفع عمولة
+                                            2%
+                                            في حال الشراء .(من قبل المشتري ).
+                                        </li>
+                                    </ul>
+                                </div>
+
+                                <div class="col-sm-4">
+                                    <br>
+                                    <br>
+                                    <br>
+                                    <p class='det-notes-box'> المديرية : @Model.LandDir </p>
+                                    <p class='det-notes-box'> المحافظة : @Model.City </p>
+                                    <p class='det-notes-box'> المنطقة @Model.Region </p>
+                                    <p class='det-notes-box'> رقم الحوض: @Model.BasinName</p>
+                                    <p class='det-notes-box'> رقم الحوض: @Model.BasinNo</p>
+                                    <p class='det-notes-box'> رقم القطعة: @Model.LandNo</p>
+                                    <p class='det-notes-box'> المساحة : @Model.TotalArea </p>
+                                    <p class='det-notes-box'> السعر : @Model.Price </p>
+                                    
+
+                                    <p class='det-notes-box'> مواصفات أخرى </p>
+
+
+
+                                </div>
+                                
+
+                            </div>
+
+                    </section>
+                    <!-- Begin Related properties -->
+
+                </div>
+            </div>
+        </div>
+        <!-- End content with sidebar -->
+
+
+
+
+    </div>
+    <!-- Include Editor style. -->
+    <script defer>
+        (function () {
+            setTimeout(function () {
+                var data = {
+                    position: '',
+                    address: '',
+                    type: 'أراضي',
+                    name: '0'
+                };
+                initMapOnDetailsPage(data);
+
+            }, 2000)
+
+        })();
+    </script>
+    <script src="~/assets/js/mapapi.js" defer></script>
+
+
+
+
+
+
+
+

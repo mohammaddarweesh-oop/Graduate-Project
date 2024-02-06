@@ -1,0 +1,112 @@
+﻿@model alhadaProject.Models.Client;
+@{
+    ViewData["Title"] = "EditClient";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<article class="post post-large post-single ar">
+    <div class="post-body">
+        <div class=" post-leave-comment">
+
+            <div class="row">
+                <form class="col-md-12 input-forms" id="newClients" method="post" accept-charset="utf-8">
+
+                    <div class="form-group">
+
+                        <div class="row">
+                            <div class="col-md-4 col-sm-12 col-xs-12">
+                                <label>رقم المعرف</label>
+                                <input asp-for="Ref" maxlength="100" class="form-control "  required="true">
+                            </div>
+
+                            <div class="col-md-4 col-sm-12 col-xs-12">
+                                <label>اسم الزبون</label>
+                                <input asp-for="ClientName" maxlength="100" class="form-control "  required="true">
+                            </div>
+                            <div class="col-md-4 col-sm-12 col-xs-12">
+                                <label>رقم الموبايل </label>
+                                <input asp-for="Mobile" maxlength="250" class="form-control "  required="true">
+                            </div>
+                            <div class="col-md-2 col-sm-12 col-xs-12">
+                                <label>درجة الاهتمام</label>
+                                <div class="form-group">
+                                    <select asp-for="Interest" asp-items="new SelectList(ViewBag.items)" class="chosen-select" style="display: none;">
+                                    </select>
+
+                                    @*<div class="chosen-container chosen-container-single" style="width: 216px;" title=""><a class="chosen-single" tabindex="-1"><span>-</span><div><b></b></div></a><div class="chosen-drop"><div class="chosen-search"><input type="text" autocomplete="off"></div><ul class="chosen-results"></ul></div></div>                                </div>*@
+                                </div>
+                            </div>
+
+
+                            @* <div class="form-group">
+                            <label>نص الرسالة*</label>
+                            <textarea name="Message" rows="9" name="comments"></textarea>
+                            </div>*@
+
+
+                            <div class="row">
+                                <div class="col-md-2 col-sm-4 col-xs-4">
+                                    <div class="form-group">
+                                        <div class="checkbox">
+                                            <label>
+                                                <input type="checkbox" asp-for="Buy" value="true" id="is_archived" />
+                                                <span class='bold red'>  نقل الي الارشيف</span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                                <div class="col-md-2 col-sm-4 col-xs-4">
+
+                                    <div class="form-group">
+                                        <div class="checkbox">
+                                            <label>
+                                                <input type="checkbox" asp-for="Buy" value="true" id="was_buy_estate" />
+                                                <span class='bold green'> قام بالشراء</span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                            </div>
+
+
+                            <div class="row">
+                                <div class="col-md-10 col-sm-12 col-xs-12">
+                                    <div class="form-group">
+                                        <label>تفاصيل الزبون*</label>
+                                        <textarea asp-for="details" rows="9" ></textarea>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <input type="hidden" asp-for="Id" >
+                        
+                        <div class="form-group">
+                            <div class="row">
+                                <div class="col-md-12 ">
+                                    <button name="save_new_assets" type="submit" id="save_new_assets" class="btn btn-default center btn-sm" value="حفظ البيانات">حفظ البيانات</button>
+                                </div>
+                            </div>
+                        </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</article>
+
+
+<script>
+    function openTheDate() {
+        if (jQuery("#was_buy_estate:checkbox:checked").length > 0) {
+            jQuery("#date_of_pay_id").show();
+        } else {
+            jQuery("#date_of_pay_id").hide();
+        }
+    }
+</script>
+

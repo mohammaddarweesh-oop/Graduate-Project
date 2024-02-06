@@ -1,0 +1,229 @@
+is_global = true
+build_property.TargetFramework = net6.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = alhadaproject
+build_property.RootNamespace = alhadaproject
+build_property.ProjectDir = C:\Users\User\Downloads\alhadaproject 8-1-2024\alhadaproject\alhadaproject\
+build_property.RazorLangVersion = 6.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = true
+build_property.MSBuildProjectDirectory = C:\Users\User\Downloads\alhadaproject 8-1-2024\alhadaproject\alhadaproject
+build_property._RazorSourceGeneratorDebug = 
+
+[C:/Users/User/Downloads/alhadaproject 8-1-2024/alhadaproject/alhadaproject/Views/Admin/AddClient.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cQWRkQ2xpZW50LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/User/Downloads/alhadaproject 8-1-2024/alhadaproject/alhadaproject/Views/Admin/AddEstate1.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cQWRkRXN0YXRlMS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/User/Downloads/alhadaproject 8-1-2024/alhadaproject/alhadaproject/Views/Admin/AddEstate2.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cQWRkRXN0YXRlMi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/User/Downloads/alhadaproject 8-1-2024/alhadaproject/alhadaproject/Views/Admin/AddLand.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cQWRkTGFuZC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/User/Downloads/alhadaproject 8-1-2024/alhadaproject/alhadaproject/Views/Admin/AddPropertyAdmin.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cQWRkUHJvcGVydHlBZG1pbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/User/Downloads/alhadaproject 8-1-2024/alhadaproject/alhadaproject/Views/Admin/AddUsers.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cQWRkVXNlcnMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/User/Downloads/alhadaproject 8-1-2024/alhadaproject/alhadaproject/Views/Admin/ChangePassword.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cQ2hhbmdlUGFzc3dvcmQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/User/Downloads/alhadaproject 8-1-2024/alhadaproject/alhadaproject/Views/Admin/EditClient.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cRWRpdENsaWVudC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/User/Downloads/alhadaproject 8-1-2024/alhadaproject/alhadaproject/Views/Admin/EditState.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cRWRpdFN0YXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/User/Downloads/alhadaproject 8-1-2024/alhadaproject/alhadaproject/Views/Admin/EditUser.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cRWRpdFVzZXIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/User/Downloads/alhadaproject 8-1-2024/alhadaproject/alhadaproject/Views/Admin/Inbox.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cSW5ib3guY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/User/Downloads/alhadaproject 8-1-2024/alhadaproject/alhadaproject/Views/Admin/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/User/Downloads/alhadaproject 8-1-2024/alhadaproject/alhadaproject/Views/Admin/LandDetails.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cTGFuZERldGFpbHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/User/Downloads/alhadaproject 8-1-2024/alhadaproject/alhadaproject/Views/Admin/MyClient.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cTXlDbGllbnQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/User/Downloads/alhadaproject 8-1-2024/alhadaproject/alhadaproject/Views/Admin/MyEstate.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cTXlFc3RhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/User/Downloads/alhadaproject 8-1-2024/alhadaproject/alhadaproject/Views/Admin/MyProfile.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cTXlQcm9maWxlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/User/Downloads/alhadaproject 8-1-2024/alhadaproject/alhadaproject/Views/Admin/readInbox.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5ccmVhZEluYm94LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/User/Downloads/alhadaproject 8-1-2024/alhadaproject/alhadaproject/Views/Admin/SearchLand.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cU2VhcmNoTGFuZC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/User/Downloads/alhadaproject 8-1-2024/alhadaproject/alhadaproject/Views/Admin/StateDetails.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cU3RhdGVEZXRhaWxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/User/Downloads/alhadaproject 8-1-2024/alhadaproject/alhadaproject/Views/Admin/Users.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cVXNlcnMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/User/Downloads/alhadaproject 8-1-2024/alhadaproject/alhadaproject/Views/Admin/ViewClient.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cVmlld0NsaWVudC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/User/Downloads/alhadaproject 8-1-2024/alhadaproject/alhadaproject/Views/Emp/AddClient.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW1wXEFkZENsaWVudC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/User/Downloads/alhadaproject 8-1-2024/alhadaproject/alhadaproject/Views/Emp/AddEstate1.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW1wXEFkZEVzdGF0ZTEuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/User/Downloads/alhadaproject 8-1-2024/alhadaproject/alhadaproject/Views/Emp/AddEstate2.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW1wXEFkZEVzdGF0ZTIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/User/Downloads/alhadaproject 8-1-2024/alhadaproject/alhadaproject/Views/Emp/AddLand.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW1wXEFkZExhbmQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/User/Downloads/alhadaproject 8-1-2024/alhadaproject/alhadaproject/Views/Emp/ChangePassword.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW1wXENoYW5nZVBhc3N3b3JkLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/User/Downloads/alhadaproject 8-1-2024/alhadaproject/alhadaproject/Views/Emp/EditClient.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW1wXEVkaXRDbGllbnQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/User/Downloads/alhadaproject 8-1-2024/alhadaproject/alhadaproject/Views/Emp/EditState.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW1wXEVkaXRTdGF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/User/Downloads/alhadaproject 8-1-2024/alhadaproject/alhadaproject/Views/Emp/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW1wXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/User/Downloads/alhadaproject 8-1-2024/alhadaproject/alhadaproject/Views/Emp/LandDetails.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW1wXExhbmREZXRhaWxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/User/Downloads/alhadaproject 8-1-2024/alhadaproject/alhadaproject/Views/Emp/MyClient.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW1wXE15Q2xpZW50LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/User/Downloads/alhadaproject 8-1-2024/alhadaproject/alhadaproject/Views/Emp/MyEstate.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW1wXE15RXN0YXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/User/Downloads/alhadaproject 8-1-2024/alhadaproject/alhadaproject/Views/Emp/MyProfile.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW1wXE15UHJvZmlsZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/User/Downloads/alhadaproject 8-1-2024/alhadaproject/alhadaproject/Views/Emp/SearchLand.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW1wXFNlYXJjaExhbmQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/User/Downloads/alhadaproject 8-1-2024/alhadaproject/alhadaproject/Views/Emp/StateDetails.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW1wXFN0YXRlRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/User/Downloads/alhadaproject 8-1-2024/alhadaproject/alhadaproject/Views/Emp/ViewClient.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW1wXFZpZXdDbGllbnQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/User/Downloads/alhadaproject 8-1-2024/alhadaproject/alhadaproject/Views/Home/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/User/Downloads/alhadaproject 8-1-2024/alhadaproject/alhadaproject/Views/Home/Privacy.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/User/Downloads/alhadaproject 8-1-2024/alhadaproject/alhadaproject/Views/Shared/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/User/Downloads/alhadaproject 8-1-2024/alhadaproject/alhadaproject/Views/Shared/_AdminLayout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9BZG1pbkxheW91dC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/User/Downloads/alhadaproject 8-1-2024/alhadaproject/alhadaproject/Views/Shared/_EmpLayout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9FbXBMYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/User/Downloads/alhadaproject 8-1-2024/alhadaproject/alhadaproject/Views/Shared/_UsarLayout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9Vc2FyTGF5b3V0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/User/Downloads/alhadaproject 8-1-2024/alhadaproject/alhadaproject/Views/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/User/Downloads/alhadaproject 8-1-2024/alhadaproject/alhadaproject/Views/User/ContactUs.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlclxDb250YWN0VXMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/User/Downloads/alhadaproject 8-1-2024/alhadaproject/alhadaproject/Views/User/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlclxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/User/Downloads/alhadaproject 8-1-2024/alhadaproject/alhadaproject/Views/User/LandDetails.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlclxMYW5kRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/User/Downloads/alhadaproject 8-1-2024/alhadaproject/alhadaproject/Views/User/LoginUser.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlclxMb2dpblVzZXIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/User/Downloads/alhadaproject 8-1-2024/alhadaproject/alhadaproject/Views/User/SearchLand.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlclxTZWFyY2hMYW5kLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/User/Downloads/alhadaproject 8-1-2024/alhadaproject/alhadaproject/Views/User/StateDetails.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlclxTdGF0ZURldGFpbHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/User/Downloads/alhadaproject 8-1-2024/alhadaproject/alhadaproject/Views/User/ViewEstate.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlclxWaWV3RXN0YXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/User/Downloads/alhadaproject 8-1-2024/alhadaproject/alhadaproject/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/User/Downloads/alhadaproject 8-1-2024/alhadaproject/alhadaproject/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/User/Downloads/alhadaproject 8-1-2024/alhadaproject/alhadaproject/Views/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-20kszyc6xa

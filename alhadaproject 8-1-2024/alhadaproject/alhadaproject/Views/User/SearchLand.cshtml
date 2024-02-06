@@ -1,0 +1,226 @@
+﻿@model IEnumerable<alhadaProject.Models.Land>
+
+@{
+    ViewData["Title"] = "SearchLand";
+    Layout = "~/Views/Shared/_UsarLayout.cshtml";
+}
+
+<div role="main" class="main no-padding-bottom">
+    <!-- Begin Advanced Search -->
+    <section class="pgl-advanced-search pgl-bg-light search-box">
+        <div class="container small">
+            <form method="post" id="main_land_search" accept-charset="utf-8">
+                <div class="row ar">
+                    <div class="col-md-2 col-sm-2 col-xs-12">
+                        <div class="form-group">
+                            <label>رقم المرجع </label>
+                            <input type="text" name="refs" value="" class="form-control">
+
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-sm-4 col-xs-12">
+                        <div class="form-group">
+                            <label> اسم المالك</label>
+                            <input type="text" name="owner" value="" class="form-control">
+
+                        </div>
+                    </div>
+                    <div class="col-md-4  col-sm-4 col-xs-8">
+                        <div class="form-group">
+                            <label>رقم المالك </label>
+                            <input type="text" name="mobile" value="" class="form-control">
+
+                        </div>
+                    </div>
+                    <div class="col-md-2 col-sm-2 col-xs-4">
+                        <div class="form-group">
+                            <div class="checkbox">
+                                <label>
+                                    <input type="checkbox" name="sold" value="true">
+                                    <span class="bold red"> مباع</span>
+                                </label>
+                            </div>
+                        </div>
+
+                    </div>
+
+
+                    <div class="col-md-2 col-sm-4 col-xs-6">
+                        <div class="form-group">
+                            <label> المحافظة</label>
+                            <select name="city" class="chosen-select" style="display: none;">
+                                <option value="0">-</option>
+                                <option value="1">عمان</option>
+                               
+
+                            </select>
+                            @*<div class="chosen-container chosen-container-single" style="width: 165px;" title=""><a class="chosen-single" tabindex="-1"><span>-</span><div><b></b></div></a><div class="chosen-drop"><div class="chosen-search"><input type="text" autocomplete="off"></div><ul class="chosen-results"></ul></div></div>*@
+
+                        </div>
+                    </div>
+                    <div class="col-md-2 col-sm-4 col-xs-6">
+                        <div class="form-group">
+                            <label>المديرية </label>
+                            <select name="landDir" class="chosen-select" style="display: none;">
+                                <option value="0">-</option>
+
+                                <option value="2">اراضي غرب عمان</option>
+                                <option value="3">اراضي شمال عمان</option>
+                                <option value="4">اراضي شرق عمان</option>
+                                <option value="5">اراضي جنوب عمان</option>
+
+                            </select>
+                            @*<div class="chosen-container chosen-container-single" style="width: 165px;" title=""><a class="chosen-single" tabindex="-1"><span>-</span><div><b></b></div></a><div class="chosen-drop"><div class="chosen-search"><input type="text" autocomplete="off"></div><ul class="chosen-results"></ul></div></div>*@
+
+                        </div>
+                    </div>
+
+                    <div class="col-md-2 col-sm-4 col-xs-6">
+                        <div class="form-group">
+                            <label>القرية </label>
+                            <input type="text" name="region" value="" class="form-control">
+
+                        </div>
+                    </div>
+                    <div class="col-md-2 col-sm-4 col-xs-6">
+                        <label>الحوض</label>
+                        <div class="form-group">
+                            <input type="text" name="basinName" value="" class="form-control">
+
+
+                        </div>
+                    </div>
+
+                    <div class="col-md-2 col-sm-4 col-xs-6">
+                        <div class="form-group">
+                            <label> رقم القطعة</label>
+                            <input type="text" name="landNo" value="" class="form-control">
+
+
+                        </div>
+                    </div>
+
+                    <div class="col-md-4 col-sm-4 col-xs-12">
+                        <div class="row ">
+                            <!-- pgl-narrow-row  -->
+                            <div class="col-md-6 col-xs-6">
+                                <div class="form-group">
+                                    <label> المساحة من </label>
+                                    <input type="text" name="fromArea" value="" class="form-control">
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-xs-6">
+                                <div class="form-group">
+                                    <label> المساحة الى</label>
+                                    <input type="text" name="toArea" value="" class="form-control">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4 col-sm-4 col-xs-12">
+                        <div class="row ">
+                            <!-- pgl-narrow-row  -->
+                            <div class="col-md-6 col-xs-6">
+                                <div class="form-group">
+                                    <label> السعر من </label>
+                                    <input type="text" name="fromPrice" value="" class="form-control">
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-xs-6">
+                                <div class="form-group">
+                                    <label> السعر الى</label>
+                                    <input type="text" name="toPrice" value="" class="form-control">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="col-md-2 col-sm-4 col-xs-12 ">
+                        <div class="form-group">
+                            <div class="row ">
+                                <label>  </label>
+                                <input type="submit" class="btn btn-block btn-primary" value="بحث">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </section>
+    <!-- End Advanced Search -->
+    <!-- Begin Properties -->
+    <section class="pgl-properties pgl-bg-grey">
+        <div class="container">
+            <h2>الاراضي</h2>
+            <!-- Tab panes -->
+            <div class="tab-content ar">
+                <div class="tab-pane active" id="all">
+
+                    @foreach (alhadaProject.Models.Land item in Model)
+                    {
+                        <div class="pgl-property animation">
+
+                            <div class="row">
+                                <div class="col-sm-4 col-md-4 col-xs-12">
+                                    <div class="property-thumb-info-image">
+                                        <a asp-action="LandDetails" asp-controller="User" asp-route-id="@item.Id">
+                                            <img alt="" class="img-responsive" src="~/uploads/@item.Source">
+                                            <span class="property-thumb-info-label">
+
+                                                <span class="label price">@item.Price &nbsp;<span>د.أ @item.Price</span><span>/م</span></span>
+                                            </span>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="col-sm-8 col-md-8 col-xs-12">
+                                    <div class="property-thumb-info">
+
+                                        <div class="property-thumb-info-content">
+                                            <a href="http://test.upright-jo.com/Lands/details/213">
+                                                <h3>
+                                                    <strong>( 1 )</strong>&nbsp;
+                                                </h3>
+                                                <address>
+                                                    @item.LandDir - @item.City - @item.Region
+                                                </address>
+
+                                                <div class="building-note-overflow"><div align="right"><font face="Arial"> @item.Notes
+                                            </a>
+                                        </div>
+                                        <div class="amenities clearfix">
+                                            <ul class="pull-right">
+                                                <li><strong>المساحة:</strong> @item.TotalArea<sup>م٢</sup></li>
+                                            </ul>
+                                            <ul class="pull-left">
+                                                <li><strong> السعر:</strong> (@item.Price)</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    }
+
+
+
+                </div>
+            </div>
+            <ul class="pagination">
+            </ul>
+        </div>
+    </section>
+    <!-- End Properties -->
+
+
+
+</div>
+<script src="./admin_searchLand_files/mapapi(1).js.download"></script>
+<script>
+
+    (function () {
+        initMap();
+    })();
+</script>

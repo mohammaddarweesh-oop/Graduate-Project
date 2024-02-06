@@ -1,0 +1,95 @@
+﻿@model alhadaProject.Models.Employee
+@{
+    ViewData["Title"] = "MyProfile";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<div role="main" class="main pgl-bg-grey">
+    <!-- Begin page top -->
+    <section class="page-top">
+        <div class="container ar">
+            <div class="page-top-in">
+                <h2><span> معلومات المستخدم</span></h2>
+            </div>
+        </div>
+    </section>
+    <!-- End page top -->
+    <!-- Begin content with sidebar -->
+
+    <div class="container">
+        <div class="row ar">
+            <div class="col-md-6 content textCenter col-center-block">
+                <p>
+                    هذة الشاشة مخصصة لإدارة الموقع
+                </p>
+            </div>
+            <hr>
+        </div>
+        <div class="row ar">
+
+            <div class="form-group ">
+                <div class="col-md-12 col-xs-12 col-sm-12">
+                    <label> الاسم الكامل</label>
+                    @Model.EmpName
+                </div>
+
+            </div>
+            <div class="form-group">
+                <div class="col-md-12 col-xs-12 col-sm-12">
+                    <label>الايميل الالكتروني</label>
+                    @Model.Email
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-md-12 col-xs-12 col-sm-12">
+                    <label> رقم الهاتف</label>
+                    <a href="tel:@Model.Phone">@Model.Phone</a>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-md-12 col-xs-12 col-sm-12 ">
+                    <a href="javascript:;" onclick="show_password()" class="show_password block"><span class="undrline"> اضهار الرقم السري</span></a>
+                    <a href="javascript:;" onclick="hide_password()" class="hide_password  block" style="display: none">  إخفاء الرقم السري</a>
+                </div>
+            </div>
+            <div class="form-group password-box" style="display: none">
+                <div class="col-md-12 col-xs-12 col-sm-12">
+                    <label>  الرقم السري</label>:
+                    @Model.Password
+                </div>
+            </div>
+            <script>
+                function show_password() {
+                    jQuery('.show_password').hide();
+                    jQuery('.password-box, .hide_password').show();
+                }
+                function hide_password() {
+                    jQuery('.show_password').show();
+                    jQuery('.password-box, .hide_password').hide();
+                }
+            </script>
+
+            <div class="form-group">
+                <div class="col-md-12 col-xs-12 col-sm-12">
+                    <a asp-action="changePassword" asp-controller="admin" class="">
+                        <span class="undrline"> يمكنك تغير الرقم السري الخاص بك </span>
+                    </a>
+                </div>
+            </div>
+
+
+            <div class="form-group">
+
+                <div class="form-group">
+                    <div class="col-md-12 col-xs-12 col-sm-12">
+                        <label> ملاحظات :</label>
+                        <br>
+                        @Model.Notes
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End content with sidebar -->
+</div>
+

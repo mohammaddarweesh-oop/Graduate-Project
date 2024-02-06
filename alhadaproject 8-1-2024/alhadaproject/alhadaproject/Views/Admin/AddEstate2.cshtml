@@ -1,0 +1,578 @@
+﻿@model alhadaProject.Models.State
+@{
+    ViewData["Title"] = "AddEstate2";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+
+<article class="post post-large post-single ar assets_details">
+    <div class="post-body">
+        <div class=" post-leave-comment"> 
+            <div class="form-group">
+                <div class="row">
+                    <div class="col-md-4 col-sm-12 col-xs-12 ">
+                         
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <form  class="col-md-12 input-forms" id="newAssetsForm" enctype="multipart/form-data" method="post" accept-charset="utf-8">
+                <div class="form-group">
+                    <div class="row">
+                        <div class="col-md-3 col-sm-12 col-xs-12">
+                                                            <h3>  رقم المرجع </h3>
+
+                                 <div class="form-group"> 
+                                    
+                                    <input type="text" asp-for="Ref"  value=""  class="form-control " placeholder="أدخل رقم المرجع">
+                                </div>
+
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                    <div class="row">
+
+                        <div class="col-md-2 col-xs-6">
+                            <label>مساحة أرض العقار</label>
+                            <input type="text"  asp-for="LandArea" maxlength="100" class="form-control " value="">
+                        </div>
+                        <div class="col-md-2 col-xs-6">
+                            <label>سنة البناء</label>
+                            <div class="form-group"> 
+                                <select asp-for="BuildYear" asp-items="new SelectList(ViewBag.year)" class="chosen-select" style="display: none;"></select>
+@*<div class="chosen-container chosen-container-single" style="width: 216px;" title=""><a class="chosen-single" tabindex="-1"><span>-</span><div><b></b></div></a><div class="chosen-drop"><div class="chosen-search"><input type="text" autocomplete="off"></div><ul class="chosen-results"></ul></div></div>*@
+                            </div>
+                        </div>
+                        <div class="col-md-2 col-xs-6">
+                            <label>عدد شقق العقار </label>
+                            <div class="form-group">
+                                        <select asp-for="ApartNo" asp-items="new SelectList(ViewBag.num)"  class="chosen-select" style="display: none;"> </select>
+@*<div class="chosen-container chosen-container-single" style="width: 216px;" title=""><a class="chosen-single" tabindex="-1"><span>0</span><div><b></b></div></a><div class="chosen-drop"><div class="chosen-search"><input type="text" autocomplete="off"></div><ul class="chosen-results"></ul></div></div>*@
+                            </div>
+                        </div>
+                        <div class="col-md-2 col-xs-6"> 
+                            <label> المصدر</label>
+                            <div class="form-group"> 
+                                <select asp-for="Source" asp-items="new SelectList(ViewBag.source)"  class="chosen-select" style="display: none;">
+
+</select>
+@*<div class="chosen-container chosen-container-single" style="width: 216px;" title=""><a class="chosen-single" tabindex="-1"><span>Facebook</span><div><b></b></div></a><div class="chosen-drop"><div class="chosen-search"><input type="text" autocomplete="off"></div><ul class="chosen-results"></ul></div></div>*@
+                            </div>
+                        </div> 
+                    </div>
+                </div>
+                <div class="form-group"> 
+                    <div class="form-group">
+                        <div class="row">
+                            <div class="col-md-4 col-xs-12 ">
+                                <label>أسم المالك / أسم الاسكان </label>
+                                <input type="text" asp-for="Owner" maxlength="100" class="form-control " value="">
+                            </div>
+                            <div class="col-md-4 col-xs-12">
+                                <label>رقم الموبايل </label>
+                                <input type="text" asp-for="Mobile" maxlength="100" class="form-control " value="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="row">
+                            <div class="col-md-2 col-xs-12 col-sm-3">
+                                <label> المحافظة</label>
+                                <select asp-for="City"  asp-items="new SelectList(ViewBag.city)" class="chosen-select" style="display: none;">
+
+</select>
+@*<div class="chosen-container chosen-container-single" style="width: 216px;" title=""><a class="chosen-single" tabindex="-1"><span>جميع المدن</span><div><b></b></div></a><div class="chosen-drop"><div class="chosen-search"><input type="text" autocomplete="off"></div><ul class="chosen-results"></ul></div></div>*@
+                            </div>
+                             <div class="col-md-2 col-xs-12 col-sm-3">
+                                <label>الحي</label>
+                                <select asp-for="Region" asp-items="new SelectList(ViewBag.region)" class="chosen-select" style="display: none;">
+</select>
+@*<div class="chosen-container chosen-container-single" style="width: 216px;" title=""><a class="chosen-single" tabindex="-1"><span>جميع الاحياء</span><div><b></b></div></a><div class="chosen-drop"><div class="chosen-search"><input type="text" autocomplete="off"></div><ul class="chosen-results"></ul></div></div>*@
+                            </div>
+                            <div class="col-md-4 col-xs-12 col-sm-4">
+                                <label>الموقع</label>
+                                <input type="text"  asp-for="Location" maxlength="100" class="form-control " value="">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="row">
+                            <div class="col-md-10 col-xs-12 col-sm-12">
+                                <label>العنوان بالتفصيل/ملاحظات</label>
+                                <textarea asp-for ="Address" class="form-control tarea" placeholder="العنوان بالتفصيل" rows="14"  ></textarea>
+                            </div> 
+                        </div>
+                    </div> 
+                    
+
+
+                  
+                                    </div>
+
+
+                    <div class="form-group">
+                        <div class="row">
+
+                           
+
+                            <div class="col-md-2 col-sm-3 col-xs-12">
+                                <div class="form-group">
+                                    <label>تصنيف العقار</label>
+                                        <select asp-for="Category" asp-items="new SelectList(ViewBag.category)" class="chosen-select " style="display: none;">
+
+</select>
+@*<div class="chosen-container chosen-container-single" style="width: 216px;" title=""><a class="chosen-single" tabindex="-1"><span>شقة</span><div><b></b></div></a><div class="chosen-drop"><div class="chosen-search"><input type="text" autocomplete="off"></div><ul class="chosen-results"></ul></div></div>*@
+                                </div>
+                            </div>
+                            <div class="col-md-2 col-sm-3 col-xs-6">
+                                <div class="form-group"> 
+                                    <label> نوع العقار</label>
+                                        <select asp-for="stateType" asp-items="new SelectList(ViewBag.stateType)" class="chosen-select" style="display: none;">
+
+</select>
+@*<div class="chosen-container chosen-container-single" style="width: 216px;" title=""><a class="chosen-single" tabindex="-1"><span>للبيع</span><div><b></b></div></a><div class="chosen-drop"><div class="chosen-search"><input type="text" autocomplete="off"></div><ul class="chosen-results"></ul></div></div>*@
+                                </div>
+                            </div>
+                            <div class="col-md-2 col-sm-3 col-xs-6">
+                                <div class="form-group"> 
+                                    <label>مساحة البناء</label>
+                                    <input type="number" asp-for="StateArea" maxlength="100" class="form-control " value="">
+                                </div>
+                            </div>
+                            <div class="col-md-2 col-sm-3 col-xs-6"> 
+                                <div class="form-group">
+                                    <label>حالة العقار   </label>
+                                        <select asp-for="StateStatus" asp-items="new SelectList(ViewBag.StateStatus)" class="chosen-select" style="display: none;">
+
+</select>
+@*<div class="chosen-container chosen-container-single" style="width: 216px;" title=""><a class="chosen-single" tabindex="-1"><span>فارغ</span><div><b></b></div></a><div class="chosen-drop"><div class="chosen-search"><input type="text" autocomplete="off"></div><ul class="chosen-results"></ul></div></div>*@
+                                </div>
+                            </div>
+                            <div class="col-md-2 col-sm-3 col-xs-6">
+                                <div class="form-group"> 
+                                    <label>السعر </label>
+                                    <input type="text" asp-for="Price" maxlength="100" class="form-control " value="">
+                                </div>
+                            </div> 
+                            <div class="col-md-2 col-sm-3 col-xs-6">
+                                <div class="form-group">
+                                    <label>الطابق</label>
+                                        <select asp-for="Floor" asp-items="new SelectList(ViewBag.floor)" class="chosen-select" style="display: none;">
+
+                                       </select>
+@*<div class="chosen-container chosen-container-single" style="width: 216px;" title=""><a class="chosen-single" tabindex="-1"><span>-</span><div><b></b></div></a><div class="chosen-drop"><div class="chosen-search"><input type="text" autocomplete="off"></div><ul class="chosen-results"></ul></div></div>*@
+                                </div>
+                            </div>
+                            <div class="col-md-1 col-sm-3 col-xs-6">
+                                <div class="form-group">
+                                    <label> الغرف </label>
+                                    <label class="sr-only" for="number_of_rooms">1  </label>
+                                        <select asp-for="RoomNo" asp-items="new SelectList(ViewBag.num)" class="chosen-select" style="display: none;">
+
+</select>
+@*<div class="chosen-container chosen-container-single" style="width: 93px;" title=""><a class="chosen-single" tabindex="-1"><span>0</span><div><b></b></div></a><div class="chosen-drop"><div class="chosen-search"><input type="text" autocomplete="off"></div><ul class="chosen-results"></ul></div></div>*@
+ 
+                                </div>
+                            </div>
+                            <div class="col-md-2 col-sm-3 col-xs-6">
+                                <div class="form-group">
+                                    <label>غرف الماستر</label>
+                                    <label class="sr-only" for="number_of_master_rooms">1  </label>
+                                        <select asp-for="MasterNo" asp-items="new SelectList(ViewBag.num)" data-placeholder="غرف الماستر " class="chosen-select" style="display: none;">
+
+</select>
+@*<div class="chosen-container chosen-container-single" style="width: 216px;" title=""><a class="chosen-single" tabindex="-1"><span>0</span><div><b></b></div></a><div class="chosen-drop"><div class="chosen-search"><input type="text" autocomplete="off"></div><ul class="chosen-results"></ul></div></div>*@
+                                </div>
+                            </div>
+                            <div class="col-md-1 col-sm-3 col-xs-6">
+                                <div class="form-group">
+                                    <label>البلكونات</label> 
+                                    <label class="sr-only" for="number_of_balconies">1  </label>
+                                    <select asp-for="BalconyNo" asp-items="new SelectList(ViewBag.num)" data-placeholder="البلكونات " class="chosen-select" style="display: none;">
+
+</select>@*<div class="chosen-container chosen-container-single" style="width: 93px;" title=""><a class="chosen-single" tabindex="-1"><span>0</span><div><b></b></div></a><div class="chosen-drop"><div class="chosen-search"><input type="text" autocomplete="off"></div><ul class="chosen-results"></ul></div></div>*@
+                                </div>
+                            </div>
+                            <div class="col-md-1 col-sm-3 col-xs-6">
+                                <div class="form-group">
+                                    <label>الحمامات</label> 
+                                    <label class="sr-only" for="number_of_bathrooms">1  </label>
+                                    <select asp-for="PathNo" asp-items="new SelectList(ViewBag.num)" data-placeholder="الحمامات " class="chosen-select" style="display: none;">
+
+</select>
+@*<div class="chosen-container chosen-container-single" style="width: 93px;" title=""><a class="chosen-single" tabindex="-1"><span>0</span><div><b></b></div></a><div class="chosen-drop"><div class="chosen-search"><input type="text" autocomplete="off"></div><ul class="chosen-results"></ul></div></div>*@
+                                </div>
+                            </div>
+                            <div class="col-md-1 col-sm-3 col-xs-6">
+                                <div class="form-group">
+
+                                    <label>المطابخ</label> 
+                                    <label class="sr-only" for="number_of_kitchens">1  </label>
+                                        <select asp-for="KitchNo" asp-items="new SelectList(ViewBag.num)" data-placeholder="المطابخ " class="chosen-select" style="display: none;">
+
+</select>
+@*<div class="chosen-container chosen-container-single" style="width: 93px;" title=""><a class="chosen-single" tabindex="-1"><span>0</span><div><b></b></div></a><div class="chosen-drop"><div class="chosen-search"><input type="text" autocomplete="off"></div><ul class="chosen-results"></ul></div></div>*@
+                                </div>
+                            </div>
+                            <div class="col-md-2 col-sm-3 col-xs-6">
+                                <div class="form-group">
+                                    <label>غرف المعيشة</label>
+                                    <label class="sr-only" for="number_of_living_rooms">1  </label>
+                                    <select asp-for="LiveRoomNo" asp-items="new SelectList(ViewBag.num)" data-placeholder="غرف المعيشة " class="chosen-select" style="display: none;">
+
+</select>
+@*<div class="chosen-container chosen-container-single" style="width: 216px;" title=""><a class="chosen-single" tabindex="-1"><span>0</span><div><b></b></div></a><div class="chosen-drop"><div class="chosen-search"><input type="text" autocomplete="off"></div><ul class="chosen-results"></ul></div></div>*@
+                                </div>
+                            </div>
+                            <div class="col-md-1 col-sm-3 col-xs-6">
+                                <div class="form-group">
+                                    <label>الصالونات</label> 
+                                    <label class="sr-only" for="number_of_salons">1  </label>
+                                        <select asp-for="SaloonNo" asp-items="new SelectList(ViewBag.num)" data-placeholder="الصالونات " class="chosen-select" style="display: none;">
+
+</select>
+@*<div class="chosen-container chosen-container-single" style="width: 93px;" title=""><a class="chosen-single" tabindex="-1"><span>0</span><div><b></b></div></a><div class="chosen-drop"><div class="chosen-search"><input type="text" autocomplete="off"></div><ul class="chosen-results"></ul></div></div>*@
+ 
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <hr>
+                <div class="form-group">
+                    <div class="row">
+                        <div class="col-md-2 col-sm-4 col-xs-6">
+                            <div class="checkbox">
+                                <label>
+                                        <input type="checkbox" asp-for="LaundryRoom" value="true" id="laundry_room">
+   غرفة غسيل
+                                </label>
+
+                            </div>
+                        </div>
+                        <div class="col-md-2 col-sm-4 col-xs-6">
+                            <div class="checkbox larger-box">
+                                <label>  <input type="checkbox" asp-for="MaidRoom" value="true" id="housekeeper_room">
+    غرفة خدامة
+                                </label> 
+                            </div>
+                        </div> 
+                        <div class="col-md-2 col-sm-4 col-xs-6">
+                            <div class="checkbox">
+                                    <label>
+                                        <input type="checkbox" asp-for="Heating" value="true" id="heating">
+    تدفئة
+                                </label> 
+                            </div>
+                        </div>
+                        <div class="col-md-2 col-sm-4 col-xs-6">
+                            <div class="checkbox">
+                                <label>   <input type="checkbox" asp-for="EstablishHeat" value="true" id="establish_heating">
+    تأسيس تدفئة
+                                </label> 
+                            </div>
+                        </div>
+                        <div class="col-md-2 col-sm-4 col-xs-6">
+                            <div class="checkbox">
+                                <label>    <input type="checkbox" asp-for="Conditioning" value="true" id="air_conditioner">
+    تكييف
+                                </label> 
+                            </div>
+                        </div>
+                        <div class="col-md-2 col-sm-4 col-xs-6">
+                            <div class="checkbox">
+                                <label>   <input type="checkbox" asp-for="Elevator" value="true" id="elevator">
+    مصعد
+                                </label> 
+                            </div>
+                        </div>
+                        <div class="col-md-2 col-sm-4 col-xs-6">
+                            <div class="checkbox">
+                                <label>   <input type="checkbox" asp-for="Guard" value="true" id="bodyguard">
+    حارس
+                                </label> 
+                            </div>
+                        </div>
+                        <div class="col-md-2 col-sm-4 col-xs-6">
+                            <div class="checkbox larger-box">
+                                <label>   <input type="checkbox" asp-for="PrivateGarage" value="true" id="ground_garage">
+    كراج خاص
+                                </label> 
+                            </div>
+                        </div>
+                        <div class="col-md-2 col-sm-4 col-xs-6">
+                            <div class="checkbox">
+                                <label>    <input type="checkbox" asp-for="Garage" value="true" id="special_garag">
+  كراج 
+                                </label> 
+                            </div>
+                        </div>
+
+                        <div class="col-md-2 col-sm-4 col-xs-6">
+                            <div class="checkbox">
+                                <label>   <input type="checkbox" asp-for="Garden" value="true" id="garden">
+    حديقة
+                                </label> 
+                            </div>
+                        </div> 
+                        <div class="col-md-2 col-sm-4 col-xs-6">
+                            <div class="checkbox">
+                                <label>   <input type="checkbox" asp-for="Taras" value="true" id="Taras">
+    ترس
+                                </label> 
+                            </div>
+                        </div>
+                        <div class="col-md-2 col-sm-4 col-xs-6">
+                            <div class="checkbox larger-box">
+                                <label>  <input type="checkbox" asp-for="Entrance" value="true" id="independent_entrance">
+    مدخل مستقل
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="col-md-2 col-sm-4 col-xs-6">
+                            <div class="checkbox">
+                                <label>  <input type="checkbox" asp-for="Furnished" value="true" id="Furniture">
+    مفروشة
+                                </label> 
+                            </div>
+                        </div>
+
+                        <div class="col-md-2 col-sm-4 col-xs-6">
+                            <div class="checkbox">
+                                <label>  <input type="checkbox" asp-for="Haunted" value="true" id="is_inhabited">
+    مسكونة
+                                </label> 
+                            </div>
+                        </div>
+
+                        <div class="col-md-2 col-sm-4 col-xs-6">
+                            <div class="checkbox">
+                                <label>   <input type="checkbox" asp-for="NeverLive" value="true" id="NewBuild">
+    جديد لم تسكن بعد
+                                </label> 
+                            </div>
+                        </div> 
+                        <div class="col-md-2 col-sm-4 col-xs-6">
+                            <div class="checkbox">
+                                <label>     <input type="checkbox" asp-for="Geezer" value="true" id="electric_kettle">
+    جيزير
+                                </label> 
+                            </div>
+                        </div>
+
+                        <div class="col-md-2 col-sm-4 col-xs-6">
+                            <div class="checkbox">
+                                <label>     <input type="checkbox" asp-for="FirePlace" value="true" id="fair_place">
+  فيربليس
+                                </label> 
+                            </div>
+                        </div>  
+                        <div class="col-md-2 col-sm-4 col-xs-6">
+                            <div class="checkbox">
+                                <label>    <input type="checkbox" asp-for="SwimmingPool" value="true" id="swimming_pool">
+   مسبح
+                                </label> 
+                            </div>
+                        </div>
+                        <div class="col-md-2 col-sm-4 col-xs-6">
+                            <div class="checkbox">
+                                <label>      <input type="checkbox" asp-for="SolarHeater" value="true" id="solarium">
+    سخان شمسي
+                                </label> 
+                            </div>
+                        </div>
+
+                        <div class="col-md-2 col-sm-4 col-xs-6">
+                            <div class="checkbox">
+                                <label>   <input type="checkbox" asp-for="Jacozzi" value="true" id="Jacuzzi">
+   جاكوزي
+                                </label> 
+                            </div>
+                        </div>
+
+                        <div class="col-md-2 col-sm-4 col-xs-6">
+                            <div class="checkbox">
+                                <label>   <input type="checkbox" asp-for="ShowerBox" value="true" id="shower_box">
+   شور بوكس
+                                </label> 
+                            </div>
+                        </div>
+
+                        <div class="col-md-2 col-sm-4 col-xs-6">
+                            <div class="checkbox">
+                                <label>   <input type="checkbox" asp-for="DoubleGlass" value="true" id="dobale_glass">
+    دبل جلاس
+                                </label> 
+                            </div>
+                        </div>
+                        <div class="col-md-2 col-sm-4 col-xs-6">
+                            <div class="checkbox">
+                                <label>   <input type="checkbox" asp-for="Ceramic" value="true" id="tiles_seramic">
+     أرضيات سيراميك
+                                </label> 
+                            </div>
+                        </div>
+
+                        <div class="col-md-2 col-sm-4 col-xs-6">
+                            <div class="checkbox">
+                                <label>   <input type="checkbox" asp-for="Marble" value="true" id="tiles_granite">
+    أرضيات رخام
+                                </label> 
+                            </div>
+                        </div>
+
+                        <div class="col-md-2 col-sm-4 col-xs-6">
+                            <div class="checkbox">
+                                <label>   <input type="checkbox" asp-for="ElectricBlind" value="true" id="elec_apparatuses">
+     اباجورات كهرباء
+                                </label> 
+                            </div>
+                        </div>
+
+                        <div class="col-md-2 col-sm-4 col-xs-6">
+                            <div class="checkbox">
+                                <label>   <input type="checkbox" asp-for="Parquet" value="true" id="hardwood">
+      باركية
+                                </label> 
+                            </div>
+                        </div> 
+                        <div class="col-md-2 col-sm-4 col-xs-6">
+                            <div class="checkbox">
+                                <label>   <input type="checkbox" asp-for="Viewed" value="true" id="live">
+    إطلالة
+                                </label> 
+                            </div>
+                        </div>
+                        <div class="col-md-2 col-sm-4 col-xs-6">
+                            <div class="checkbox">
+                                <label>   <input type="checkbox" asp-for="Installment" value="true" id="is_instalment">
+   امكانية التقسيط
+                                </label> 
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <hr>
+                <div class="form-group">
+                    <div class="row">
+                        <!-- End -->
+                        <div class="col-md-2 col-sm-3 col-xs-6">
+                            <div class="checkbox">
+                                <label>   <input type="checkbox" asp-for="HomePage" value="true" id="special">
+    الاعلان مميز
+                                </label> 
+                            </div>
+                        </div>
+
+
+
+                         <div class="col-md-2 col-sm-3 col-xs-6">
+                            <div class="checkbox">
+                                <label>   <input type="checkbox" asp-for="Sold" value="true" id="special">
+    العقار مباع
+                                </label> 
+                            </div>
+                        </div>
+
+
+                        <div class="col-md-2 col-sm-3 col-xs-6">
+                            <div class="checkbox">
+                                <label>   <input type="checkbox" asp-for="StateView" value="true" id="Seen">
+    الاعلان شوهد
+                                </label> 
+                            </div>
+                        </div>
+                        <div class="col-md-2 col-sm-2 col-xs-6">
+                            <div class="checkbox">
+                                <label>   <input type="checkbox" asp-for="trading" value="true" id="is_commercial">
+   تجاري
+                                </label> 
+                            </div>
+                        </div>
+                        <!-- End -->
+                        <div class="col-md-2 col-sm-4 col-xs-6">
+                            <div class="checkbox">
+                                <label>   <input type="checkbox" asp-for="NeedDate" value="true" id="date_to_see">
+    تحتاج موعد للمشاهدة 
+                                </label> 
+                            </div>
+                        </div>
+                        <div class="col-md-2 col-sm-3 col-xs-6">
+                            <label>العمولة</label>
+                            <div class="form-group">
+                                <label class="sr-only" for="commeisstion">عمولة %  </label>
+                                <select asp-for="Commision" asp-items="new SelectList(ViewBag.num)" class="chosen-select" style="display: none;">
+
+</select>
+@*<div class="chosen-container chosen-container-single" style="width: 216px;" title=""><a class="chosen-single" tabindex="-1"><span>0</span><div><b></b></div></a><div class="chosen-drop"><div class="chosen-search"><input type="text" autocomplete="off"></div><ul class="chosen-results"></ul></div></div>*@
+                            </div>
+                        </div>
+                    </div>
+                </div> 
+                <hr>
+                <div class="form-group">
+                    <div class="row">
+                        <div class="col-md-4 col-sm-6 col-xs-12">
+                            <label>اسم الحارس</label>
+                            <input type="text" maxlength="100" asp-for="GuardName" class="form-control" value="">
+                        </div>
+                        <div class="col-md-3 col-sm-6 col-xs-12">
+                            <label>رقم موبايل الحارس</label>
+                            <input type="text" asp-for="GradMobile" maxlength="100" class="form-control" value="">
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="row">
+                        <div class="col-md-4 col-sm-3 col-xs-12">
+                            <label>مساحة الارض و ترس الشقة</label>
+                            <input type="text" maxlength="100" asp-for="LandTarasArea" class="form-control" value="">
+                        </div>
+                        <div class="col-md-3 col-sm-3 col-xs-6">
+                            <label>مساحة الحديقة</label>
+                            <input type="text" asp-for="GardenArea" maxlength="100" class="form-control" value="">
+                        </div>
+                        <div class="col-md-3 col-sm-3 col-xs-6">
+                            <label>مساحة الترس</label>
+                            <input type="text" maxlength="100" asp-for="TarasArea" class="form-control" value="">
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="row">
+
+                        <div class="col-md-12">
+                            <label> صور الإعلان</label>
+                            <input type="file" class="form-control" id="images" asp-for="Photo"  onchange="preview_images();" multiple="">
+                        </div> 
+                    </div>
+                </div>
+                <div class="row images-uploaded" id="image_preview"></div>
+                <div class="form-group">
+                    <div class="row">
+                        <div class="col-md-12 col-sm-12 ">
+                            <label>ملاحظات تظهر على الصفحة الرئيسية</label>
+                            <textarea asp-for="Notes" maxlength="5000" rows="14" class="form-control" id="froala-editor" name="notes" aria-hidden="true" ></textarea>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="row">
+                        <div class="col-md-12 ">
+                                <input type="submit" value="حفظ البيانات" class="btn btn-default center btn-sm" />
+                            @*<button name="save_new_assets" type="submit" id="save_new_assets" class="btn btn-default center btn-sm" value="حفظ البيانات">حفظ البيانات</button>*@
+                        </div>
+                    </div> 
+                </div>
+                            </form></div>
+
+
+                    </div>
+    </div>
+
+</article>

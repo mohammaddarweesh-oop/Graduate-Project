@@ -1,0 +1,49 @@
+﻿
+@{
+    ViewData["Title"] = "Inbox";
+    List<Inbox> inboxes = ViewBag.msg;    
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<div role="main" class="main pgl-bg-grey">
+    <!-- Begin content with sidebar -->
+    <div class="container">
+        <div class="row ar">
+            <div class="col-md-6 content textCenter col-center-block">
+                <p>
+                    هذة الشاشة مخصصة لإدارة الموقع
+                </p>
+            </div>
+            <hr>
+        </div>
+        <div class="row ar">
+            <table class="table table-striped ar">
+                <thead>
+                    <tr>
+                        <th></th>
+                        <th>الاسم</th>
+                        <th>الاميل</th>
+                        <th>عنوان الرسالة</th>
+                        <th>مشاهدة</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (Inbox item in inboxes)
+                    {
+                        <tr class="">
+                        <td><i class="fa fa-envelope-open-o"></i></td>
+                        <td>@item.FullName </td>
+                        <td>@item.Email</td>
+                        <td>@item.Title</td>
+                        <td> <a asp-action="ReadInbox" asp-controller="Admin" asp-route-id="@item.Id">قرآة الرسالة</a></td>
+
+                        </tr> 
+                    }
+                   
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <!-- End content with sidebar -->
+</div>

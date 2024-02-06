@@ -1,0 +1,163 @@
+﻿@model alhadaProject.Models.Land
+
+@{
+    ViewData["Title"] = "AddLand";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<article class="post post-large post-single ar">
+    <div class="post-body">
+        <div class=" post-leave-comment">
+            <h3>إضافة أرض جديد</h3>
+            <p>قم بتعبئة البيانات في الحقول التالية</p>
+            <div class="row">
+                <form  class="col-md-12 input-forms" id="new_land_form" enctype="multipart/form-data" method="post" accept-charset="utf-8">
+                    <div class="form-group">
+                        <div class="row">
+                            <div class="col-md-2 col-sm-3 col-xs-12">
+                                <label>رقم المرجع</label>
+                                <div class="form-group">
+                                    <input type="text" asp-for="Ref" class="form-control" placeholder="أختر عنوان للارض">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+
+                            <div class="col-md-2 col-sm-3 col-xs-12">
+                                <div class="form-group">
+                                    <label> المحافظة </label>
+                                    <select  asp-for="City" asp-items="new SelectList(ViewBag.city)" class="chosen-select" >
+                                    </select>
+                                    @*<div class="chosen-container chosen-container-single" style="width: 216px;" title=""><a class="chosen-single" tabindex="-1"><span>-</span><div><b></b></div></a><div class="chosen-drop"><div class="chosen-search"><input type="text" autocomplete="off"></div><ul class="chosen-results"></ul></div></div>*@
+                                </div>
+                            </div>
+                            <div class="col-md-2 col-sm-3 col-xs-6">
+                                <div class="form-group">
+                                    <label> المديرية</label>
+                                    <select asp-for="LandDir" asp-items="new SelectList(ViewBag.landDir)" class="chosen-select" style="display: none;">
+                                    </select>
+                                    @*<div class="chosen-container chosen-container-single" style="width: 216px;" title=""><a class="chosen-single" tabindex="-1"><span>-</span><div><b></b></div></a><div class="chosen-drop"><div class="chosen-search"><input type="text" autocomplete="off"></div><ul class="chosen-results"></ul></div></div>*@
+                                </div>
+                            </div>
+
+                            <div class="col-md-2 col-sm-3 col-xs-6">
+                                <div class="form-group">
+                                    <label> القرية </label>
+                                    <div class="form-group">
+                                        <input type="text" asp-for="Region" maxlength="100" class="form-control ">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-2 col-sm-3 col-xs-6">
+                                <div class="form-group">
+                                    <label> الحوض</label>
+                                    <input type="text" asp-for="BasinName" maxlength="100" class="form-control ">
+                                </div>
+                            </div>
+                            <div class="col-md-2 col-sm-3 col-xs-6">
+                                <div class="form-group">
+                                    <label> رقم الحوض</label>
+                                    <input type="text" asp-for="BasinNo" maxlength="100" class="form-control ">
+                                </div>
+                            </div>
+
+
+                            <div class="col-md-2 col-sm-3 col-xs-6">
+                                <div class="form-group">
+                                    <label> رقم القطعة</label>
+                                    <input type="text" asp-for="LandNo" maxlength="100" class="form-control ">
+                                </div>
+                            </div>
+                            <div class="col-md-2 col-sm-3 col-xs-6">
+                                <div class="form-group">
+                                    <label class="en"> المساحة م٢ </label>
+                                    <input type="text" asp-for="TotalArea" maxlength="100" class="form-control ">
+                                </div>
+                            </div>
+                            <div class="col-md-2 col-sm-3 col-xs-6">
+                                <div class="form-group">
+                                    <label>  السعر / م٢</label>
+                                    <input type="number" asp-for="Price" maxlength="100" class="form-control ">
+                                </div>
+                            </div>
+
+                        </div>
+                        <hr>
+                    </div>
+                    <div class="form-group">
+                        <div class="row">
+                            <div class="col-md-4 col-sm-6  col-xs-12">
+                                <div class="form-group">
+                                    <label>أسم مالك الارض </label>
+                                    <input type="text" asp-for="Owner" maxlength="100" class="form-control ">
+                                </div>
+                            </div>
+                            <div class="col-md-4 col-sm-6  col-xs-12">
+                                <div class="form-group">
+                                    <label>رقم الموبايل </label>
+                                    <input type="text" asp-for="Mobile" maxlength="100" class="form-control ">
+                                </div>
+                            </div>
+                        </div>
+                        <hr>
+
+                        <div class="row">
+                            <div class="col-md-4 col-sm-9 col-xs-12">
+                                <div class="form-group">
+                                    <label>الموقع على الخريطة</label>
+                                    <input type="text" asp-for="Location" maxlength="100" class="form-control ">
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="form-group">
+                            <div class="row">
+                                <div class="col-md-12 col-sm-12 col-xs-12">
+                                    <label> صور الإعلان</label>
+                                    <input type="file" class="form-control" asp-for="Source" onchange="preview_images();" accept="">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <div class="row">
+                                <div class="col-md-12 col-sm-12 col-xs-12">
+                                    <label> حالة الأرض </label>
+                                    <input type="checkbox" asp-for="Sold" value="true"> مباع
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="images-uploaded">
+                            <div class="row" id="image_preview"></div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12 col-sm-12  col-xs-12">
+                                <div class="form-group">
+                                    <label>الملاحظات</label>
+
+                                    <textarea asp-for="Notes" class="form-control tarea" placeholder="" rows="13" aria-hidden="true"></textarea>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <input type="hidden" name="user_id" value="2">
+                        <input type="hidden" name="date" value="2024-01-01">
+                        <input type="hidden" name="time" value="05:40:50">
+
+                        <div class="row">
+                            <div class="col-md-12 ">
+                                <input type="submit" class="btn btn-default center btn-sm" value="حفظ البيانات" />
+                                @*<button name="save_new_assets" type="submit" id="save_new_assets" class="btn btn-default center btn-sm" value="حفظ البيانات">حفظ البيانات</button>*@
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</article>
+<script src="~/assets/js/mapapi.js"></script>
